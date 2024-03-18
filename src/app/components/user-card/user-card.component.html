@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{user.name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{user.email}}</li>
+      <li class="list-group-item">{{user.phone}}</li>
+      <li class="list-group-item">{{user.username}}</li>
+    </ul>
+    <div class="card-body">
+        <button type="button" (click)="deleteUserCard(user.id)" class="btn btn-danger">delete</button>
+        <button type="button" (click)="editUserCard(user)" class="btn btn-warning">edit</button>
+    </div>
+  </div>

@@ -1,0 +1,8 @@
+<header>
+    <button class="buttonAdduser" (click)="addUser()">add user</button>
+</header>
+<main [style.minHeight.px]="h">
+    <div *ngFor="let user of userService._users">
+        <app-user-card [user]="user" (deleteUser)="onDeleteUser($event)" (editUser)="onEditUser($event)"></app-user-card>
+     </div>
+</main>

@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>Add user</h2>
+<mat-dialog-content>
+    <form [formGroup]="userForm">
+        <mat-form-field class="example-form-field">
+            <mat-label>name</mat-label>
+            <input matInput type="text" formControlName="name">    
+          </mat-form-field>
+          <mat-form-field class="example-form-field">
+            <mat-label>email</mat-label>
+            <input matInput type="email" formControlName="email">    
+          </mat-form-field>
+          <mat-form-field class="example-form-field">
+            <mat-label>phone</mat-label>
+            <input matInput type="text" formControlName="phone">    
+          </mat-form-field>
+          <mat-form-field class="example-form-field">
+            <mat-label>userName</mat-label>
+            <input matInput type="text" formControlName="userName">    
+          </mat-form-field>
+    </form>
+    <button   mat-raised-button color="primary"  (click)="addUser()" [disabled]="userForm.invalid">{{isEdit?"Изменить":"Добавить"}}</button>
+</mat-dialog-content>
+
